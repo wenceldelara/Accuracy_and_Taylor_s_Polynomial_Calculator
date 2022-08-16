@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styelesheet.css">
+    </head>
+    <body>
+        <div class="center">
+            <h2>Accuracy and Taylor's Polynomial</h2>
+            <h4><i>Group 1</i></h4>
+        </div>
+        
+        <div class="container">
+            <div style="text-align:center">
+                <p><b>Function: </b> cos(x)</p>
+                <p><i>Enter Values:</i></p>
+            </div>
+            <table style="margin: auto;">
+                <tr>
+                    <td><p>Variable:</p></td>
+                    <td><input type="number" id="acp_variable"></td>
+                </tr>
+                <tr>
+                    <td><p>Point [Enter 0 for Maclaurin's Polynomial]:</p></td>
+                    <td><input type="number" id="acp_point"></td>
+                </tr>
+                <tr>
+                    <td><p>Degree:</p></td>
+                    <td><input type="number" id="acp_degree"></td>
+                </tr>
+                <tr>
+                    <td><p># of Decimal Places:</p></td>
+                    <td><input type="number" id="acp_decimal"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="text-align: right;">
+                        <button onclick="acp_clear()">Clear</button>
+                        <button onclick="acp_compute()">Compute</button>
+                    </td>
+                </tr>
+            </table>
+            
+            <hr>
+            
+            <p style="text-align: center;"><b>Result/s</b></p><br>
+            <table style="margin: auto;">
+                <tr>
+                    <td><p>True Value:</p></td>
+                    <td><p id="result_true_value">---</p></td>
+                </tr>
+                <tr>
+                    <td><p>Approximate vlaue:</p></td>
+                    <td><p id="result_approximate_vlaue">---</p></td>
+                </tr>
+                <tr>
+                    <td><p>Chopping:</p></td>
+                    <td><p id="result_chopping">---</p></td>
+                </tr>
+                <tr>
+                    <td><p>Roudning:</p></td>
+                    <td><p id="result_rounding">---</p></td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <p style="text-align: center;"><b>Error/s</b></p><br>
+            <table>
+                <tr>
+                    <th><i>Approximate Value</i></th>
+                    <th></th>
+                    <th><i>Chopping</i></th>
+                    <th></th>
+                    <th><i>Rounding</i></th>
+                </tr>
+                <tr>
+                    <td><p>Absolute True Error:</p></td>
+                    <td style="padding-right: 10px;"><p id="ate_av">---</p></td>
+
+                    <td><p>Absolute True Error:</p></td>
+                    <td style="padding-right: 10px;"><p id="ate_c">---</p></td>
+                    
+                    <td><p>Absolute True Error:</p></td>
+                    <td style="padding-right: 10px;"><p id="ate_r">---</p></td>
+                </tr>
+                <tr>
+                    <td><p>Percent Error:</p></td>
+                    <td><p id="pe_av">---</p></td>
+
+                    <td><p>Percent Error:</p></td>
+                    <td><p id="pe_c">---</p></td>
+
+                    <td><p>Percent Error:</p></td>
+                    <td><p id="pe_r">---</p></td>
+                </tr>
+
+                <tr>
+                    <td><p></p></td>
+                    <td><p></p></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <script src="script.js" async defer></script>
+    </body>
+</html>
